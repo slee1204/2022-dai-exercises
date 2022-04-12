@@ -8,9 +8,10 @@ h1 {
   position:relative;
   transition:left 1s;
   left:0vw;
+  margin: 300px 0;
 }
 </style>
-<h1>Hi</h1>
+<h1 class='head'>Hi</h1>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -31,6 +32,11 @@ class ScrollText extends HTMLElement {
         //assign variables!
     }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    SlideRight(){
+        this.shadowRoot.querySelector('.head').style.cssText = `
+            left:100vw;
+        `
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
